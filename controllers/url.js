@@ -124,7 +124,7 @@ async function sendPasswordLink(req, res) {
           from: process.env.EMAIL,
           to: req.body.email,
           subject: "Password Reset Link",
-          text: `This link is valid for 2 minutes http://localhost:3000/forgotpassword/${finduser._id}/${setusertoken.verifytoken}`,
+          text: `This link is valid for 2 minutes https://shoppingadminuser-frontend.vercel.app/forgotpassword/${finduser._id}/${setusertoken.verifytoken}`,
         };
         transporter.sendMail(mailOptions, (error, info) => {
           if (error) {
